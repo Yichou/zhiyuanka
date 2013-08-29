@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.zhiyuanka.app"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="17" />
+
+    <!-- begin 基础权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.RUN_INSTRUMENTATION" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <!-- end 基础权限 -->
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.zhiyuanka.app.ui.WelcomeActivity"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.fullscn" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.zhiyuanka.app.ui.HomeActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.zhiyuanka.app.ui.UsersetActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.zhiyuanka.app.ui.TestActivity"
+            android:label="@string/title_test" >
+        </activity>
+        <activity
+            android:name="com.zhiyuanka.app.ui.TestRetActivity"
+            android:label="@string/title_test_ret" >
+        </activity>
+        <activity
+            android:name="com.zhiyuanka.app.ui.SchoolListActivity"
+            android:label="@string/title_school_list"
+            android:theme="@style/Theme.Sherlock.Light.DarkActionBar" >
+        </activity>
+        <activity
+            android:name="com.zhiyuanka.app.ui.SchoolInfoActivity"
+            android:label="@string/title_test_ret" >
+        </activity>
+        <activity
+            android:name="com.zhiyuanka.app.ui.AboutActivity"
+            android:label="@string/app_name" >
+        </activity>
+
+        <!-- start umeng -->
+        <activity
+            android:name="com.umeng.fb.ConversationActivity"
+            android:theme="@style/Theme.Sherlock.NoActionBar" />
+        <activity
+            android:name="com.umeng.fb.ContactActivity"
+            android:theme="@style/Theme.Sherlock.NoActionBar" />
+
+        <service
+            android:name="com.umeng.common.net.DownloadingService"
+            android:exported="true"
+            android:process=":DownloadingService" >
+        </service>
+
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="51eab82f56240b4e3d01a96a" />
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="hiapk" />
+        <!-- end umeng -->
+    </application>
+
+</manifest>

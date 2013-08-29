@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <color name="bg2">#fff5f5f5</color>
+    <color name="bg">#ffffffff</color>
+    <color name="fg">#ff55a9ff</color>
+    <color name="fg2">#ffff5555</color>
+    <color name="white">#ffffffff</color>
+    <color name="actionbar_bg">#ff55a9ff</color>
+    <color name="btn_text">#ffffffff</color>
+    
+</resources>

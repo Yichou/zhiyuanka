@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg2"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/app_name"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/fg" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/say1"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:src="@drawable/wave" />
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="0dp" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tv_btn_testret"
+                style="@style/btn_style0"
+                android:layout_height="45dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/btn_style0"
+                android:drawableLeft="@drawable/ic_text"
+                android:drawablePadding="10dp"
+                android:drawableRight="@drawable/ind"
+                android:padding="10dp"
+                android:text="测试结果 " />
+
+            <TextView
+                android:id="@+id/tv_btn_retest"
+                style="@style/btn_style0"
+                android:layout_height="45dp"
+                android:layout_marginTop="30dp"
+                android:drawableLeft="@drawable/ic_reset"
+                android:drawablePadding="10dp"
+                android:drawableRight="@drawable/ind"
+                android:padding="10dp"
+                android:text="重新测评 " />
+
+            <TextView
+                android:id="@+id/tv_btn_about"
+                style="@style/btn_style0"
+                android:layout_height="45dp"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/btn_style0"
+                android:drawableLeft="@drawable/ic_heart"
+                android:drawablePadding="10dp"
+                android:drawableRight="@drawable/ind"
+                android:padding="10dp"
+                android:text="关注我们 " />
+
+            <TextView
+                android:id="@+id/tv_btn_fadeback"
+                style="@style/btn_style0"
+                android:layout_height="45dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="40dp"
+                android:background="@drawable/btn_style0"
+                android:drawableLeft="@drawable/btn_icon2"
+                android:drawablePadding="10dp"
+                android:drawableRight="@drawable/ind"
+                android:padding="10dp"
+                android:text="用户反馈 " />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

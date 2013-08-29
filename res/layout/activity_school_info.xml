@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg2"
+        android:paddingBottom="20dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="20dp" >
+
+        <ImageView
+            android:id="@+id/iv_school_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/ic_school_default" />
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/iv_school_icon" >
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:text="浙江大学"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/fg" />
+
+            <TextView
+                android:id="@+id/tv_type1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/tv_name"
+                android:layout_marginTop="10dp"
+                android:text="985" />
+
+            <TextView
+                android:id="@+id/tv_type2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/tv_type1"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/tv_type1"
+                android:text="公办" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_btn_btn"
+            style="@style/btn_style0"
+            android:layout_width="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_alignBottom="@+id/iv_school_icon"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="0dp"
+            android:text="专业列表" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="100dp"
+        android:layout_height="3dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="-3dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/line" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="1"
+        android:background="@color/bg" >
+    </android.support.v4.view.ViewPager>
+
+</LinearLayout>

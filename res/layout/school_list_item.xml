@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp" >
+
+    <ImageView
+        android:id="@+id/iv_school_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/ic_school_default" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/iv_school_icon" >
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:text="浙江大学"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/fg" />
+
+        <TextView
+            android:id="@+id/tv_type1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/tv_name"
+            android:layout_marginTop="10dp"
+            android:text="985" />
+
+        <TextView
+            android:id="@+id/tv_type2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/tv_type1"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/tv_type1"
+            android:text="公办" />
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ind_blue" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/relativeLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/relativeLayout1"
+        android:layout_below="@+id/relativeLayout1"
+        android:layout_marginTop="20dp" >
+
+        <TextView
+            android:id="@+id/tv_majro1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:text="计算机科学与技术" />
+
+        <TextView
+            android:id="@+id/tv_majro2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/tv_majro1"
+            android:text="电子商务" />
+
+        <TextView
+            android:id="@+id/tv_majro3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/tv_majro1"
+            android:layout_marginTop="10dp"
+            android:text="商务英语" />
+
+        <TextView
+            android:id="@+id/tv_majro4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/tv_majro3"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/tv_majro3"
+            android:text="材料成型与控制" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">志愿卡</string>
+    <string name="title_hello">欢迎使用志愿卡</string>
+    <string name="title_test">MBTI 测试</string>
+    <string name="title_test_ret">MBTI 测试结果</string>
+    <string name="title_school_list">高校大全</string>
+    <string name="title_profers">适合我的职业</string>
+    <string name="title_schools">适合我的学校</string>
+    <string name="title_majros">适合我的专业</string>
+    <string name="start_test">开始测试</string>
+    <string name="hello_text">选志愿其实是在选未来的职业和人生\n\n\t用5分钟时间，认识自己所有题目都是必选题。\n很可能两个选项都是在描述你，但请选择你更是怎么样的，你更在意什么，更喜欢什么。\n\t这个测试寻找的是你最天生的倾向，不要过多考虑具体的情境，也不要想你的父母、老是、同学对你的期望。选项没有优劣之分。请选择真实的自己，而不是期望的自己。</string>
+    <string name="str1">手工者  - 冷静观察却迅速行动</string>
+    <string name="str2">你很有忍耐力，很有灵活度。一般来说，你是一个冷静的观察者，但是一旦出现问题，你会迅速地行动，找出解决措施。你总是在分析怎么样更有效，并喜欢用大量的数据来解决实际性的问题。你对事情的来龙去脉很感兴趣。你用客观的有逻辑性的原则来捋顺事实。你很重视效率和功效。</string>
+    <string name="str3">拿破仑、希特勒、比尔盖茨</string>
+    <string name="a">a</string>
+    <string name="say0">恭喜你结束高考，开始人生新的旅程。 在使用志愿卡之前，先确认下你的基本信息吧~</string>
+    <string name="say1">在这个夏天，做一个最重要的决定</string>
+    <string name="about1">\@志愿卡</string>
+    <string name="zheda">浙江大学（Zhejiang University）简称“浙大”，坐落于素有“人间天堂”之称的历史文化名城——杭州，临近国家级风</string>
+    <string name="about2">www.zhiyuanka.com</string>
+
+    <string-array name="arr_pici">
+        <item>第一批</item>
+        <item>第二批</item>
+        <item>第三批</item>
+        <item>第四批</item>
+    </string-array>
+
+    <string name="title0">亲爱的同学，</string>
+    <string name="title1">美国50年权威测试系统</string>
+    <string name="title_mbti">MBTI职业测评</string>
+    <string name="start_test">开始测评</string>
+    <string name="category">类别</string>
+    <string name="bantch">批次</string>
+    <string name="from_prov">生源地</string>
+
+</resources>
