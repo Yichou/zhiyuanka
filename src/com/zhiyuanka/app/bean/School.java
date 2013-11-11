@@ -10,9 +10,9 @@ import android.content.Context;
 import android.graphics.Bitmap;
 import android.widget.ImageView;
 
-import com.yichou.common.LocalDataUtils;
-import com.yichou.common.UrlBitmapLoader;
-import com.yichou.common.UrlBitmapLoader.IBitmapHolder;
+import com.yichou.common.utils.LocalDataUtils;
+import com.yichou.common.utils.UrlBitmapLoader;
+import com.yichou.common.utils.UrlBitmapLoader.IBitmapHolder;
 import com.zhiyuanka.app.data.Res;
 
 /**

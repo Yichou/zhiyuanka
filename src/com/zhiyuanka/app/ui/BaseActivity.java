@@ -5,7 +5,7 @@ import android.os.Bundle;
 
 import com.actionbarsherlock.app.SherlockFragmentActivity;
 import com.actionbarsherlock.view.MenuItem;
-import com.yichou.sdk.SdkUtils;
+import com.yichou.common.sdk.SdkUtils;
 import com.zhiyuanka.app.common.Settings;
 import com.zhiyuanka.app.data.Globals;
 import com.zhiyuanka.app.data.Res;
@@ -46,13 +46,13 @@ public abstract class BaseActivity extends SherlockFragmentActivity {
 	
 	@Override
 	protected void onPause() {
-		SdkUtils.onPause(getActivity());
+		SdkUtils.getSdk().onPause(getActivity());
 		super.onPause();
 	}
 	
 	@Override
 	protected void onResume() {
 		super.onResume();
-		SdkUtils.onResume(getActivity());
+		SdkUtils.getSdk().onResume(getActivity());
 	}
 }

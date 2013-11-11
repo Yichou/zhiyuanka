@@ -17,9 +17,9 @@ import android.widget.ImageView;
 import android.widget.LinearLayout.LayoutParams;
 import android.widget.TextView;
 
-import com.yichou.common.HttpUtils;
-import com.yichou.common.LocalDataUtils;
-import com.yichou.sdk.SdkUtils;
+import com.yichou.common.sdk.SdkUtils;
+import com.yichou.common.utils.HttpUtils;
+import com.yichou.common.utils.LocalDataUtils;
 import com.zhiyuanka.app.R;
 import com.zhiyuanka.app.data.Globals;
 
@@ -57,7 +57,7 @@ public class TestRetActivity extends PostActivity implements OnClickListener, On
 		
 		Log.i("", builder.toString());
 		
-		String jsonRet = HttpUtils.get(builder.toString());
+		String jsonRet = HttpUtils.get(this, builder.toString());
 		if(jsonRet != null){
 			JSONObject jsonObject = new JSONObject(jsonRet);
 			int ret2 = jsonObject.getInt("error");
@@ -94,7 +94,7 @@ public class TestRetActivity extends PostActivity implements OnClickListener, On
 					Globals.rid = jsonObject.getInt("rid");
 					Globals.mbtiJsonObj = jsonObject;
 					
-					SdkUtils.event(getActivity(), 
+					SdkUtils.getSdk().sendEvent(getActivity(), 
 							"finishTest", 
 							"uid=" + Globals.uid
 							 + "&rid=" + Globals.rid);

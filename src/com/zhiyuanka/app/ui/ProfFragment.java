@@ -15,7 +15,7 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.yichou.sdk.SdkUtils;
+import com.yichou.common.sdk.SdkUtils;
 import com.zhiyuanka.app.R;
 import com.zhiyuanka.app.adapter.BaseListAdapter;
 import com.zhiyuanka.app.bean.Profession;
@@ -100,7 +100,7 @@ public class ProfFragment extends BaseFragment implements OnItemClickListener {
 	
 	@Override
 	public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-		SdkUtils.event(getActivity(), 
+		SdkUtils.getSdk().sendEvent(getActivity(), 
 				"viewProfession", 
 				"uid=" + Globals.uid
 				 + "&pro_id=" + adapter.getId(position));

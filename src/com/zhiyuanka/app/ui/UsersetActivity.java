@@ -15,8 +15,8 @@ import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
 
-import com.yichou.common.HttpUtils;
-import com.yichou.sdk.SdkUtils;
+import com.yichou.common.sdk.SdkUtils;
+import com.yichou.common.utils.HttpUtils;
 import com.zhiyuanka.app.R;
 import com.zhiyuanka.app.adapter.SpinnerCursorAdapter;
 import com.zhiyuanka.app.common.Utils;
@@ -52,7 +52,7 @@ public class UsersetActivity extends PostActivity implements OnClickListener,
 		
 		Log.i("", builder.toString());
 		
-		String jsonRet = HttpUtils.get(builder.toString());
+		String jsonRet = HttpUtils.get(this, builder.toString());
 		if(jsonRet != null){
 			JSONObject jsonObject = new JSONObject(jsonRet);
 			int ret2 = jsonObject.getInt("error");
@@ -61,7 +61,7 @@ public class UsersetActivity extends PostActivity implements OnClickListener,
 				Globals.uid = Integer.valueOf(jsonObject.getString("uid"));
 				Log.i("", "getUid=" + Globals.uid);
 				
-				SdkUtils.event(getActivity(), 
+				SdkUtils.getSdk().sendEvent(getActivity(), 
 						"createUser", 
 						"uid=" + Globals.uid);
 				
