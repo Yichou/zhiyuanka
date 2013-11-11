@@ -15,7 +15,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout.LayoutParams;
 import android.widget.TextView;
 
-import com.yichou.common.HttpUtils;
+import com.yichou.common.utils.HttpUtils;
 import com.zhiyuanka.app.R;
 import com.zhiyuanka.app.bean.School;
 import com.zhiyuanka.app.data.Globals;
@@ -52,7 +52,7 @@ public class SchoolInfoActivity extends PostActivity implements OnClickListener,
 		builder.append("&from_prov=" + Globals.province);
 		builder.append("&stu_type=" + Globals.wenli);
 
-		String jsonRet = HttpUtils.get(builder.toString());
+		String jsonRet = HttpUtils.get(this, builder.toString());
 		if (jsonRet != null) {
 			JSONObject jsonObject = new JSONObject(jsonRet);
 			int ret2 = jsonObject.getInt("error");

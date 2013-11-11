@@ -9,8 +9,8 @@ import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 
-import com.yichou.common.LocalDataUtils;
-import com.yichou.common.UrlBitmapLoader;
+import com.yichou.common.utils.LocalDataUtils;
+import com.yichou.common.utils.UrlBitmapLoader;
 import com.zhiyuanka.app.R;
 
 public final class Res {

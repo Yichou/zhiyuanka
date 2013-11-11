@@ -4,14 +4,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.widget.Toast;
 
 import com.umeng.fb.FeedbackAgent;
-import com.yichou.sdk.DownloadCallback;
-import com.yichou.sdk.SdkUtils;
+import com.yichou.common.sdk.SdkUtils;
 import com.zhiyuanka.app.R;
 import com.zhiyuanka.app.common.Settings;
-import com.zhiyuanka.app.common.UmenSdkImpl;
 import com.zhiyuanka.app.data.Globals;
 import com.zhiyuanka.app.data.Res;
 
@@ -35,20 +32,10 @@ public class HomeActivity extends BaseActivity implements OnClickListener {
 			findViewById(R.id.tv_btn_fadeback).setOnClickListener(this);
 		}
 		
-		SdkUtils.setRealImpl(new UmenSdkImpl(this));
-		
-		SdkUtils.enableCrashHandle(this, true);
-		SdkUtils.updateOnlineParams(this);
-		SdkUtils.setUpdateCfg(false, true);
-		SdkUtils.setDownloadCallback(new DownloadCallback() {
-			@Override
-			public void OnDownloadRet(int ret) {
-				if(ret != DownloadCallback.RET_SUCCESS)
-					Toast.makeText(getActivity(), "更新包下载失败，错误码" + ret , Toast.LENGTH_SHORT).show();
-			}
-		});
-		
-		SdkUtils.checkUpdate(getActivity());
+		SdkUtils.getSdk().enableCrashHandle(this);
+		SdkUtils.getSdk().updateOnlineParams(this);
+		SdkUtils.getSdk().setUpdateWifiOnly(false);
+		SdkUtils.getSdk().checkUpdate(getActivity());
 		
 		agent = new FeedbackAgent(getActivity());
 		agent.sync();

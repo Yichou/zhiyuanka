@@ -5,7 +5,6 @@ import org.json.JSONObject;
 import android.content.Context;
 import android.database.Cursor;
 
-import com.yichou.common.CrashHandler;
 import com.zhiyuanka.app.bean.Mbti;
 
 public final class Globals {
@@ -44,7 +43,7 @@ public final class Globals {
 		dbUtil = new MbtiDB(context);
 		mbti = new Mbti(40, 33, 20, 50);
 		applicationContext = context.getApplicationContext();
-		CrashHandler.init(context);
+//		CrashHandler.init(context);
 		peovinceCursor = Globals.dbUtil.getProvinces();
 		isInit = true;
 	}

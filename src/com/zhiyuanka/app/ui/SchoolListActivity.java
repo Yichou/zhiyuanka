@@ -28,8 +28,8 @@ import android.widget.Toast;
 import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuItem;
 import com.actionbarsherlock.widget.SearchView;
-import com.yichou.common.HttpUtils;
-import com.yichou.sdk.SdkUtils;
+import com.yichou.common.sdk.SdkUtils;
+import com.yichou.common.utils.HttpUtils;
 import com.zhiyuanka.app.R;
 import com.zhiyuanka.app.adapter.SchoolListAdapter;
 import com.zhiyuanka.app.adapter.SpinnerCursorAdapter;
@@ -117,7 +117,7 @@ public class SchoolListActivity extends PostActivity implements OnItemClickListe
 		
 		Log.i("", builder.toString());
 		
-		String jsonRet = HttpUtils.get(builder.toString());
+		String jsonRet = HttpUtils.get(this, builder.toString());
 		if(jsonRet != null){
 			JSONObject jsonObject = new JSONObject(jsonRet);
 			int ret2 = jsonObject.getInt("error");
@@ -291,7 +291,7 @@ public class SchoolListActivity extends PostActivity implements OnItemClickListe
 			Globals.wenli = filter.stu_type;
 			Globals.province = filter.from_prov;
 			
-			SdkUtils.event(getActivity(), 
+			SdkUtils.getSdk().sendEvent(getActivity(), 
 					"viewSchool", 
 					"uid=" + Globals.uid
 					 + "&id=" + SchoolInfoActivity.mSchool.id);

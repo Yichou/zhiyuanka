@@ -7,7 +7,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import com.yichou.common.FileUtils;
+import com.yichou.common.utils.FileUtils;
 
 public class MbtiDB extends SQLiteOpenHelper {
 	private static final String DB_NAME = "ccard.db";

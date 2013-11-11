@@ -14,8 +14,6 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.yichou.common.LocalDataUtils;
-import com.yichou.common.UrlBitmapLoader;
 import com.zhiyuanka.app.R;
 import com.zhiyuanka.app.bean.School;
 
